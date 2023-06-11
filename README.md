@@ -4,8 +4,8 @@
 
 ## Index
 
-- [My Rpg](https://github.com/0yco/Epitech/tree/master/RPG)
-- [Corewar](https://github.com/0yco/Epitech/tree/master/Corewar)
-- [42sh](https://github.com/0yco/Epitech/tree/master/42sh)
+- [My Rpg](https://github.com/0yco/Epitech/tree/main/RPG)
+- [Corewar](https://github.com/0yco/Epitech/tree/main/Corewar)
+- [42sh](https://github.com/0yco/Epitech/tree/main/42sh)
 
 `🏗️ In working for add more projects...`
