@@ -21,18 +21,12 @@ make re
 
 ## Presentation
 
-![Introduction](./assets/quick_overview/1_Introduction.png)
-
 ![Location](./assets/quick_overview/2_Location.png)
 
 ![Camps](./assets/quick_overview/3_Camps.png)
 
-![Character](./assets/quick_overview/4_Character.png)
+![Characters](./assets/quick_overview/4_Characters.png)
 
 ![Story](./assets/quick_overview/5_Story.png)
 
 ![Maps](./assets/quick_overview/6_Maps.png)
-
-![Gameplay](./assets/quick_overview/7_Gameplay_I.png)
-
-![Gameplay](./assets/quick_overview/8_Gameplay_II.png)
