@@ -1,0 +1,40 @@
+jenkins:
+  systemMessage: "Welcome to the Whanos Jenkins Instance."
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          name: "Admin"
+          password: ${ADMIN_PASSWORD}
+
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "admin"
+            description: "Whanos master"
+            permissions:
+              - "Overall/Administer"
+            assignments:
+              - "admin"
+
+tool:
+  git:
+    installations:
+      - name: git
+        home: /usr/local/bin/git
+
+jobs:
+  - file: jobs.groovy
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "github"
+              username: ${GITHUB_USERNAME}
+              password: ${GITHUB_PASSWORD}
+              description: "Github credentials"

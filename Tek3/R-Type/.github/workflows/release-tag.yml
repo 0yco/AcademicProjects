@@ -1,0 +1,41 @@
+name: Release and Tag Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Git
+      run: |
+        git config user.email "william.andreo@epitech.eu"
+        git config user.name "WilliamAndreo"
+
+    - name: Get current version
+      id: version
+      run: echo "::set-output name=current_version::$(cat version.txt)"
+
+    - name: Increment version
+      id: increment_version
+      run: echo "::set-output name=next_version::$(echo ${{ steps.version.outputs.current_version }} | awk -F. '{printf "%d.%d.%d", $1, $2, $3 + 1}')"
+
+    - name: Update version file
+      run: echo "${{ steps.increment_version.outputs.next_version }}" > version.txt
+
+    - name: Commit and push updated version
+      run: |
+        git add version.txt
+        git commit -m "Bump version to ${{ steps.increment_version.outputs.next_version }}"
+        git push origin HEAD:workflow-release-tag
+
+    - name: Create release and tag
+      run: |
+        git tag -a v${{ steps.version.outputs.current_version }} -m "Release v${{ steps.version.outputs.current_version }}"
+        git push origin --tags

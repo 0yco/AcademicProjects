@@ -1,0 +1,6 @@
+src/main.c
+src/Makefile
+test_main/
+src/*.o
+src/run
+.vscode/

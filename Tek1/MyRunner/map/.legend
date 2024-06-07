@@ -1,0 +1,11 @@
+CREATE MAP
+
+	1 : Floor
+	2 : Statue
+	3 : Void
+
+- Size : The map must be between 2 and 2000 numbers.
+- Statue(2) : The statues which are obstacles that cannot be cumulated.
+(11222232). He will put only one. This Statue will land on a cloud or in the air.
+
+Example Map : '11111212133113333312131313121'

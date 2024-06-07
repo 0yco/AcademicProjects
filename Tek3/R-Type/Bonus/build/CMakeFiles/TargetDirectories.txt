@@ -1,0 +1,5 @@
+/home/loic/Epitech/Tek_3/B-CPP-500-MPL-5-2-rtype-maxime.santos/Bonus/build/CMakeFiles/f-plane-client.dir
+/home/loic/Epitech/Tek_3/B-CPP-500-MPL-5-2-rtype-maxime.santos/Bonus/build/CMakeFiles/clean_files_project.dir
+/home/loic/Epitech/Tek_3/B-CPP-500-MPL-5-2-rtype-maxime.santos/Bonus/build/CMakeFiles/clean_project.dir
+/home/loic/Epitech/Tek_3/B-CPP-500-MPL-5-2-rtype-maxime.santos/Bonus/build/CMakeFiles/edit_cache.dir
+/home/loic/Epitech/Tek_3/B-CPP-500-MPL-5-2-rtype-maxime.santos/Bonus/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,33 @@
+name: CMake with Conan Build
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up CMake and Conan
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-pip
+        pip3 install --upgrade cmake
+        pip3 install conan
+
+        conan profile detect --force
+    - name: Install Dependencies with Conan
+      run: |
+        conan install . --output-folder=build --build=missing
+
+    - name: Build Project with CMake
+      run: |
+        cd build
+        cmake .. -DCMAKE_TOOLCHAIN_FILE="conan_toolchain.cmake" -DCMAKE_BUILD_TYPE=Release
+        cmake --build . --config Release

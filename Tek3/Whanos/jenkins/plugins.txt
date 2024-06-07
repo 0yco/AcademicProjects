@@ -1,0 +1,7 @@
+role-strategy
+git
+groovy
+job-dsl
+docker-commons
+credentials
+kubernetes

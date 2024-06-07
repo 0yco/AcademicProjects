@@ -1,0 +1,4 @@
+*.o
+lib/my/libmy.a
+.vscode/
+my_defender

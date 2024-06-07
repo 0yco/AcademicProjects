@@ -1,0 +1,11 @@
+FROM openjdk:21-jdk-slim
+
+ONBUILD COPY . /app
+
+ONBUILD WORKDIR /app
+
+ONBUILD RUN apt-get update && apt-get install -y maven
+
+ONBUILD RUN mvn package
+
+ONBUILD CMD ["java", "-jar", "target/app.jar"]

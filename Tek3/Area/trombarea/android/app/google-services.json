@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "400582900642",
+    "project_id": "trombarea-lewan",
+    "storage_bucket": "trombarea-lewan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400582900642:android:874a4c760c04adb8bf90fb",
+        "android_client_info": {
+          "package_name": "com.example.trombarea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400582900642-kad6n3j2jc8fce5vt36oc8m4347ich1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYRvajTGIxUcfgZd_jEvO2CUPJ7xUz7mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400582900642-kad6n3j2jc8fce5vt36oc8m4347ich1m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "400582900642-772qhdg59heoq9kusci7914vninl9ihn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.trombarea"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

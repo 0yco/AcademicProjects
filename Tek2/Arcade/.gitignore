@@ -1,0 +1,7 @@
+.vscode/
+lib/
+*.so
+*.o
+arcade
+-n
+*.txt

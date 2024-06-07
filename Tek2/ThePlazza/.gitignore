@@ -1,0 +1,6 @@
+.vscode/
+plazza
+*.o
+*.d
+*.log
+.idea/

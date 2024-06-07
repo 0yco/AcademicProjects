@@ -1,0 +1,5 @@
+*.o
+.vscode/
+my_runner
+lib/my/libmy.a
+assets/img/devil.png

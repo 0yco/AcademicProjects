@@ -1,0 +1,8 @@
+ai
+n4s
+n4s_buffer
+pipes.sh
+log/
+*.o
+lib/my/libmy.a
+.vscode/

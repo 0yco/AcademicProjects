@@ -1,0 +1,7 @@
+FROM esolang/befunge93
+
+ONBUILD WORKDIR /app
+
+ONBUILD COPY ./app/ ./app/
+
+ONBUILD CMD ["/root/bef", "./app/main.bf"]
