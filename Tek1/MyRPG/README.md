@@ -21,12 +21,12 @@ make re
 
 ## Presentation
 
-![Location](./assets/quick_overview/2_Location.png)
+![Location](./assets/quick_overview/1_Location.png)
 
-![Camps](./assets/quick_overview/3_Camps.png)
+![Camps](./assets/quick_overview/2_Camps.png)
 
-![Characters](./assets/quick_overview/4_Characters.png)
+![Characters](./assets/quick_overview/3_Characters.png)
 
-![Story](./assets/quick_overview/5_Story.png)
+![Story](./assets/quick_overview/4_Story.png)
 
-![Maps](./assets/quick_overview/6_Maps.png)
+![Maps](./assets/quick_overview/5_Maps.png)
