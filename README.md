@@ -1,4 +1,4 @@
-# Epitech Project
+# Academic Projects
 
 **Here are the most interesting and fun projects I've done !**
 
