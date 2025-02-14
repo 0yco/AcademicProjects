@@ -1,6 +1,6 @@
 # Academic Projects
 
-**Here are the most interesting and fun projects I've done !**
+**Here are the most interesting and fun projects I've done at Epitech and Chung-Ang University !**
 
 ## Index
 
