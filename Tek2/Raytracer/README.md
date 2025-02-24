@@ -1,5 +1,15 @@
 # Raytracer
 
+Raytracer is a C++ project that implements ray tracing, a 3D rendering algorithm that simulates the behavior of light to generate photorealistic images. Unlike real-time rendering techniques used in the video game industry, ray tracing calculates light interactions through intersection computations, making it highly computationally expensive but ideal for high-quality rendering, such as in visual effects for movies.
+
+## Features
+- **Ray tracing algorithm** for realistic image generation
+- **Material modeling** to simulate different surface properties
+- **Shadows, reflections, and refractions** for accurate light behavior
+
+## Usage
+This project takes a 3D scene as input and processes it using ray tracing to produce a high-quality rendered image. Due to the computational cost, it is not designed for real-time rendering but for producing photorealistic visuals. **More detailed in French below for the configurations.**
+
 *Vous trouverez ci dessous les parametres à entrer dans le fichier de configuration pour créer une nouvelle scene.*
 
 ## **Camera :**
@@ -10,7 +20,7 @@
     fieldOfView = value; definit le champ de vision de la caméra<br>
     antialiasing = value; change le niveau d'anticrénelage pour avoir une image + ou - "lisse"<br>
     postProcessing = value; ajoute un filtre à l'image parmis ces trois : BlackAndWhite, Blur, Sepia<br>
-    
+
 ------
 
 ## **Primitives :**
