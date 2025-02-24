@@ -1,0 +1,3 @@
+[submodule "CAU/KakaoLlama"]
+	path = CAU/KakaoLlama
+	url = https://github.com/0yco/KakaoLlama.git
