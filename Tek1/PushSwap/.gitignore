@@ -1,0 +1,8 @@
+src/*.o
+src/print_list.c
+lib/my/*.o
+lib/my/my_printf/*.o
+lib/my/libmy.a
+.vscode/
+push_swap
+utils/
