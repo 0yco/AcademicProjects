@@ -1,3 +1,6 @@
 [submodule "CAU/KakaoLlama"]
 	path = CAU/KakaoLlama
 	url = https://github.com/0yco/KakaoLlama.git
+[submodule "CAU/Breach"]
+	path = CAU/Breach
+	url = https://github.com/0yco/BreachGame.git
