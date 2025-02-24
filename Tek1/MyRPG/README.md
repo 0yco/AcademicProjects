@@ -15,7 +15,7 @@ make re
 
 -  [Lunnos](https://github.com/LunnosMp4)
 
--  [Nico-coder-ui](https://github.com/Nico-coder-ui)
+-  [Thorf1nn](https://github.com/Thorf1nn)
 
 -  [Lysandra](https://github.com/Lysandra26)
 

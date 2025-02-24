@@ -1,5 +1,17 @@
 # N-Ty.pe Project
 
+## Contributors
+
+-  [0yco](https://github.com/0yco)
+
+-  [Lunnos](https://github.com/LunnosMp4)
+
+-  [Edgarflc](https://github.com/Edgarflc)
+
+-  [SantosMaxime](https://github.com/SantosMaxime)
+
+-  [WilliamAndreo](https://github.com/WilliamAndreo)
+
 ## Description
 
 N-Type is a shoot'em up game inspired by the famous R-Type, but with a three-dimensional visual approach. The player controls a spaceship in a futuristic universe infested with extraterrestrial enemies. Although the game uses 3D graphics, the player's movement is limited to two dimensions, creating an immersive 2D platform experience.
