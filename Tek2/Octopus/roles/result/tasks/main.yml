@@ -1,0 +1,43 @@
+---
+
+# TODO Implement Result, for the moment Result only install dependancies and copy config file into server
+
+- name: Copy result service file
+  copy:
+    src: files/result.service
+    dest: /etc/systemd/system/result.service
+
+- name: Install dependencies for result
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - nodejs
+    - npm
+
+- name: Install npm dependencies for result
+  npm:
+    path: /opt/result/
+    state: present
+
+- name: Create destination directory
+  file:
+    path: "{{ playbook_dir }}"
+    state: directory
+
+- name: Extract result application
+  unarchive:
+    src: "{{ playbook_dir }}/result.tar"
+    dest: "{{ playbook_dir }}"
+
+- name: Copy application files
+  copy:
+    src: "{{ playbook_dir }}/result/"
+    dest: /opt/result/
+    remote_src: yes
+
+- name: Start result service
+  systemd:
+    name: result
+    enabled: yes
+    state: started

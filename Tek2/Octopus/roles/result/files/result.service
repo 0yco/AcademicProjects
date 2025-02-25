@@ -1,0 +1,12 @@
+[Unit]
+Description=Result web application
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/opt/result
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

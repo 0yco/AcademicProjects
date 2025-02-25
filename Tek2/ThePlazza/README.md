@@ -1,46 +1,67 @@
-THE PLAZZA
+# 🍕 The Plazza - Pizzeria Simulation
 
-Usage:
-    $> ./plazza cookingTime nCooks refillTime
+## 📌 Description
 
-    cookingTime:    Multiplier for the actual cooking time
-    nCooks:         Amount of cooks per kitchen
-    refillTime:     Time required for the kitchen to replace their ingredient stock, in milliseconds
+**The Plazza** is a pizzeria simulation where a reception manages incoming orders and distributes them to multiple kitchens. Each kitchen has a limited number of cooks preparing pizzas using available ingredients. The project addresses challenges such as **load balancing, process and thread synchronization, and inter-process communication**.
 
-ARCHITECTURE
+## 🚀 Usage
 
-    The projet is devided into different parts that are independant.
+Run the program with the following command:
+```bash
+./plazza <cookingTime> <nCooks> <refillTime>
+```
+- **cookingTime** → Multiplier for actual pizza cooking time (value between 0 and 1).
+- **nCooks** → Number of cooks per kitchen.
+- **refillTime** → Time (in ms) required for kitchens to restock ingredients.
 
-    The Core class, is meant to manage each part of the project together.
+## 🏗️ Architecture
 
-    The Kitchens, which contain their own ingredient stock and a fixed amount of cooks.
+The project is divided into several independent components:
 
-    The Cooks, whose job is to prepare the pizzas with the available ingredients of the kitchen.
+### 🏠 Core
+The **Core** class is responsible for managing all parts of the project together. It handles:
+- Order distribution to kitchens.
+- Kitchen lifecycle (creation and destruction based on demand).
+- Communication between different components.
 
+![Architecture](./README/architecture.png)
 
-CORE
+### 🍽️ Kitchens
+Each **kitchen** operates as its own **process** and contains:
+- A fixed number of **cooks** (defined by `nCooks`).
+- An **ingredient stock**, which is replenished periodically.
+- A mechanism to **automatically open and close** kitchens based on real-time demand.
 
+### 👨‍🍳 Cooks
+Each **cook** runs as an **individual thread** inside a kitchen. Their responsibilities include:
+- Taking available orders.
+- Preparing pizzas using the kitchen’s ingredient stock.
+- Managing cooking time based on the defined `cookingTime` multiplier.
 
-KITCHENS
+### 🥦 Ingredients
+Ingredients are managed through the **IIngredients** interface (`./src/ingredients`).
+Each ingredient:
+- Has a **type** (`std::string _type`), accessible via `getType()`.
+- Has a **unit count** (`int _units`), representing the available stock.
+- Can be **consumed** via `consumeUnit()`.
+- Can be **refilled** (up to 5 units) when the kitchen triggers `refill()`.
 
-    Each kitchen runs on its own process.
-    The amount of cooks they contain is defined by the nCooks parameter
+## 🎮 Interactive Shell
 
-    Kitchens should be automatically opened and closed by the core according to the needs of the Plazza in real time.
+The reception acts as an interactive shell, allowing you to:
+- **Place pizza orders** via command line, e.g.:
+  ```
+  regina XXL x7
+  ```
+- **Check kitchen status**, including active cooks and ingredient stock:
+  ```
+  status
+  ```
 
-    The kitchen defines a macro for each ingredient, in order to manage them in a smooth way, and make a clean and readable code.
-    (see ./src/Kitchen.hpp)
+## 🛠️ Technologies Used
+- **Processes** (fork, exit, wait...)
+- **Inter-Process Communication (IPC)**
+- **STL Threads & POSIX Threads (pthread_*)**
 
-COOKS
-
-    Each cook runs on their own thread
-
-INGREDIENTS
-
-    The ingredient class is defined by the IIngredients interface (located in ./src/ingredients)
-
-    Each ingredient containts a 'std::string _type' constant reachable through the getType() public method.
-    Each ingredient object actually represent a certain amount of ingredients of its type, represented by the 'int _units' variable.
-
-    This _units variable can be decremented when an ingredient is consumed through the consumeUnit() public method.
-    It can also be refilled to 5 units, when the kitchen calls the refill() public method.
+## 🎯 Objective
+Ensure efficient resource management and optimized order processing to keep the pizzeria running smoothly! 🍕🔥

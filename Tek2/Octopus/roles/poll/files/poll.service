@@ -1,0 +1,12 @@
+[Unit]
+Description=Poll service
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/python3 /opt/poll/app.py
+WorkingDirectory=/opt/poll
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

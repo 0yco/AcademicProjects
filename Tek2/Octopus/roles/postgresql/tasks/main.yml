@@ -1,0 +1,68 @@
+---
+
+- name: Import PostgreSQL GPG key
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
+- name: Add PostgreSQL repository
+  apt_repository:
+    repo: 'deb http://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main'
+    state: present
+
+- name: Install PostgreSQL 12 and psql tool
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - postgresql-12
+    - postgresql-client-12
+
+- name: start postgresql
+  systemd:
+    name: postgresql
+    state: started
+    enabled: true
+
+- name: restart postgresql
+  systemd:
+    name: postgresql
+    state: restarted
+
+- name: Copy pg_hba.conf
+  copy:
+    src: pg_hba.conf
+    dest: /etc/postgresql/12/main/pg_hba.conf
+  notify: restart postgresql
+
+- name: restart postgresql
+  systemd:
+    name: postgresql
+    state: restarted
+
+- name: Create paul database schema
+  postgresql_db:
+    name: paul
+    state: present
+
+- name: Create paul database user
+  postgresql_user:
+    name: paul
+    password: "{{ 'democracyIsFragile' | password_hash('sha256') }}"
+    encrypted: yes
+    login_user: postgres
+    login_password: postgres
+    state: present
+  become: yes
+
+- name: Grant paul user permissions
+  postgresql_privs:
+    db: paul
+    type: database
+    role: paul
+    privs: ALL
+    state: present
+    login_user: postgres
+    login_password: postgres
+  become: yes
+

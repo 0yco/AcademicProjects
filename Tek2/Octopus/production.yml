@@ -1,0 +1,21 @@
+[base]
+35.180.100.91 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+13.39.85.157 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+13.38.95.41 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+15.188.63.7 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+13.38.62.38 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[redis]
+35.180.100.91 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[postgresql]
+13.39.85.157 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[poll]
+13.38.95.41 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[worker]
+15.188.63.7 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[result]
+13.38.62.38 ansible_user=admin ansible_ssh_private_key_file=Octupus_Key_Pair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'

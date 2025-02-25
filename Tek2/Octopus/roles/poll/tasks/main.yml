@@ -1,0 +1,42 @@
+---
+- name: Copy poll service file
+  copy:
+    src: files/poll.service
+    dest: /etc/systemd/system/poll.service
+
+- name: Install dependencies for poll
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - python3
+    - python3-pip
+    - virtualenv
+
+- name: Create destination directory
+  file:
+    path: "{{ playbook_dir }}"
+    state: directory
+
+- name: Extract poll application
+  unarchive:
+    src: "{{ playbook_dir }}/poll.tar"
+    dest: "{{ playbook_dir }}"
+
+- name: Create virtualenv for poll
+  command: virtualenv /opt/pollenv
+
+- name: Copy requirements.txt to virtual machine
+  copy:
+    src: "{{ playbook_dir }}/poll/requirements.txt"
+    dest: "/tmp/requirements.txt"
+    remote_src: yes
+
+- name: Activate virtualenv for poll
+  command: /opt/pollenv/bin/pip3 install -r /tmp/requirements.txt
+
+- name: Start poll service
+  systemd:
+    name: poll
+    enabled: yes
+    state: started

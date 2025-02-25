@@ -1,0 +1,42 @@
+---
+- name: Configure hosts and install requirements
+  hosts: base
+  become: true
+
+  roles:
+    - base
+
+- name: Install and configure Redis
+  hosts: redis
+  become: true
+
+  roles:
+    - redis
+
+- name: Install and configure PostgreSQL
+  hosts: postgresql
+  become: true
+
+  roles:
+    - postgresql
+
+- name: Install and configure poll application
+  hosts: poll
+  become: true
+
+  roles:
+    - poll
+
+- name: Install and configure worker application
+  hosts: worker
+  become: true
+
+  roles:
+    - worker
+
+- name: Install and configure result application
+  hosts: result
+  become: true
+
+  roles:
+    - result

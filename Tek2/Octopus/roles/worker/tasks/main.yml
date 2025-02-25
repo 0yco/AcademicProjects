@@ -1,0 +1,35 @@
+---
+- name: Install Java
+  apt:
+    name: openjdk-11-jdk
+    state: present
+
+- name: Install Maven
+  apt:
+    name: maven
+    state: present
+
+- name: Extract result application
+  unarchive:
+    src: "{{ playbook_dir }}/worker.tar"
+    dest: "/tmp/"
+
+- name: Build worker
+  shell: "cd /tmp/worker && mvn package"
+
+- name: Copy worker jar
+  copy:
+    src: "/tmp/worker/target/worker.jar"
+    dest: "/usr/local/bin/worker.jar"
+    remote_src: yes
+
+- name: Create worker service
+  copy:
+    src: worker.service
+    dest: "/etc/systemd/system/worker.service"
+
+- name: Enable and start worker service
+  systemd:
+    name: worker
+    enabled: yes
+    state: started

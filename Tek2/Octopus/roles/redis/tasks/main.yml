@@ -1,0 +1,23 @@
+---
+- name: Install Redis
+  apt:
+    name: redis-server
+    state: present
+
+- name: Copy Redis configuration file
+  copy:
+    src: redis.conf
+    dest: /etc/redis/redis.conf
+  notify: restart redis-server
+
+- name: restart redis-server
+  systemd:
+    name: redis-server
+    state: restarted
+
+- name: Start Redis service
+  systemd:
+    name: redis-server
+    state: started
+    enabled: true
+
