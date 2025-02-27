@@ -7,8 +7,12 @@
 **TrombArea** is an automation platform that empowers you to streamline your digital life by connecting various services in custom workflows—similar to IFTTT or Zapier. This platform consists of an application server, a web client, and a mobile client, which work together to offer a seamless automation experience through a REST API. 🤖🔄
 
 
-// PUT THE PICTURES HERE
-
+![TrombArea](./README/1_Login.jpg)
+![Applets](./README/2_Applets.png)
+![Marketplace](./README/3_Marketplace.png)
+![History](./README/4_History.png)
+![Profile](./README/5_Profile.png)
+![Profile Web](./README/6_Profile_Web.png)
 
 ---
 

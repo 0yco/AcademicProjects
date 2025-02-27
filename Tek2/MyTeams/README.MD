@@ -1,3 +1,7 @@
+## Presentation
+
+![MyTeams](./README/1_MyTeams.png)
+
 ## Protocol
 
 Here is the protocol used by the server and the client.
