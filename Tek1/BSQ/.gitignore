@@ -1,0 +1,7 @@
+src/*.o
+lib/my/*.o
+lib/my/my_printf/*.o
+lib/my/libmy.a
+.vscode/
+mouli_maps/
+mouli_maps_solved/

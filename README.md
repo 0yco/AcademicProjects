@@ -2,6 +2,9 @@
 
 **Here are the most interesting and fun projects I've done at Epitech and Chung-Ang University !**
 
+> [!IMPORTANT]
+> You can now see those projects filtered by category on my Portfolio [here](https://enzo-daumalle.fr/) !  It's more simple to navigate and see the projects that you want to see 😄
+
 ## Index
 
 ### Tek1
