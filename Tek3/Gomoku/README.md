@@ -38,6 +38,15 @@
   ```
 - Ensure your bot communicates using the mandatory protocol for interacting with game engines like liskvork.
 
+### 🖥️ Running on Windows
+
+- **Piskvork Setup**:
+  - Download and install Piskvork from [SourceForge](https://sourceforge.net/projects/piskvork/).
+  - Place your AI bot executable `pbrain-gomoku-ai-[version].exe` in the Piskvork directory.
+  - Configure Piskvork to use your bot for playing Gomoku.
+
+This allows you to test and play against your AI bot on a Windows environment using Piskvork.
+
 ---
 
 ## 🌟 Project Description
