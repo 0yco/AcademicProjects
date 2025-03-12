@@ -89,8 +89,8 @@ With the best animation ever 🫶🏼
 
 ## 👥 Contributors
 
-- [Lunnos](https://github.com/LunnosMp4)
 - [0yco](https://github.com/0yco)
+- [Lunnos](https://github.com/LunnosMp4)
 - [NickSpyker](https://github.com/NickSpyker)
 - [Thorf1nn](https://github.com/Thorf1nn)
 - [Alexia](https://github.com/alexia7)

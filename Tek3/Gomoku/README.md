@@ -81,3 +81,9 @@ Your bot will be judged on:
 - **Protocol Compliance** 🔒: Following the mandatory communication protocol; forbidden moves or libraries lead to disqualification.
 
 Document your approach to demonstrate the intelligence behind your bot!
+
+## 👥 Contributors
+
+- [0yco](https://github.com/0yco)
+- [Lunnos](https://github.com/LunnosMp4)
+- [Edgarflc](https://github.com/Edgarflc)

@@ -1,16 +1,16 @@
-# Panoramix
+# 🍲 Panoramix
 
-## Context 📜
+## 📜 Context
 
 The year is **50 BC**. Gaul is almost entirely occupied by the Romans, except for **one small village of indomitable Gauls** who still resist. These villagers rely on a **magic potion** prepared by their druid, which gives them superhuman strength to fight the Romans.
 
 The druid brews a **pot of potion**, and the villagers take servings before heading into battle. When the pot is empty, a villager wakes up the druid to refill it. However, the druid has a limited number of refills before running out of ingredients.
 
-## Project Overview ⚙️
+## 🚀 Overview
 
 This project focuses on **thread and mutex programming** to handle synchronization between the druid and villagers efficiently. The goal is to implement a simulation where villagers consume potion, fight, and request refills when necessary.
 
-## Usage 🚀
+## Usage
 
 ```sh
 ./panoramix <nb_villagers> <pot_size> <nb_fights> <nb_refills>
@@ -45,7 +45,7 @@ Villager 1: I’m going to sleep now.
 Villager 2: I’m going to sleep now.
 ```
 
-## Architecture 🏗️
+## 🏗️ Architecture
 
 The project is divided into **multiple threads**:
 
@@ -53,12 +53,12 @@ The project is divided into **multiple threads**:
 - **Druid**: Runs on a separate thread, wakes up to refill the potion pot when requested, and sleeps when out of ingredients.
 - **Synchronization**: Managed using **mutexes** to avoid race conditions between villagers accessing the potion pot.
 
-## Notes 📌
+## 📌 Notes
 
 - If the **pot is empty**, villagers must wait for the druid to refill it before continuing their battles.
 - If the **druid runs out of ingredients**, villagers must finish their battles with whatever potion is left.
 - When a villager reaches their maximum number of fights, they **go to sleep**.
 
-## My Conclusion 🏁
+## 🏁 My Conclusion
 
 This project was fun and a good point for beginning the exercise in **multi-threading, synchronization, and resource management**. And who do not love Asterix & Obelix ?

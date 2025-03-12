@@ -1,12 +1,14 @@
 # 🕹️ Arcade
 
+## 🚀 Overview
+
 This project is a game engine that supports multiple games and graphical libraries.
 
 This project will only work on Linux environments.
 
 ---
 
-### 🚀 Getting Started
+## Usage
 
 To build the project, run the following command:
 
@@ -175,11 +177,12 @@ Its highly recommended to create an Exception class that inherits from the `std:
 
 This class will be used to throw exceptions when an error occurs.
 
-### Authors
+## 👥 Contributors
 
-- Loïc Tisseyre (loic.tisseyre@epitech.eu)
-- Enzo Daumalle (enzo.daumalle@epitech.eu)
-- William Andreo (william.andreo@epitech.eu)
+-  [0yco](https://github.com/0yco)
+-  [Lunnos](https://github.com/LunnosMp4)
+-  [WilliamAndreo](https://github.com/WilliamAndreo)
+
 
 Pair group :
 

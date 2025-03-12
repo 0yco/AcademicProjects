@@ -160,3 +160,8 @@ The project will be evaluated based on:
 - **Functionality** ✅: Does the system deploy applications correctly?
 - **Good Practices** 🧹: Clean, maintainable, and well-documented code.
 - **Redeployability** 🔄: The ability to easily redeploy the infrastructure.
+
+## 👥 Contributors
+
+- [0yco](https://github.com/0yco)
+- [Lunnos](https://github.com/LunnosMp4)

@@ -1,4 +1,4 @@
-# 🤖 my_marvin - Change Sides and Tame the Beast
+# 🤖 My Marvin - Change Sides and Tame the Beast
 
 ---
 
