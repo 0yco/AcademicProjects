@@ -7,12 +7,13 @@
 **TrombArea** is an automation platform that empowers you to streamline your digital life by connecting various services in custom workflows—similar to IFTTT or Zapier. This platform consists of an application server, a web client, and a mobile client, which work together to offer a seamless automation experience through a REST API. 🤖🔄
 
 
-![TrombArea](./README/1_Login.jpg)
-![Applets](./README/2_Applets.png)
-![Marketplace](./README/3_Marketplace.png)
-![History](./README/4_History.png)
-![Profile](./README/5_Profile.png)
-![Profile Web](./README/6_Profile_Web.png)
+<img src="./README/1_Login.jpg" width="220" alt=""/>
+<img src="./README/4_History.png" width="230" alt=""/>
+<img src="./README/5_Profile.png" width="230" alt=""/>
+
+<img src="./README/2_Applets.png" width="700" alt=""/>
+<img src="./README/3_Marketplace.png" width="700" alt=""/>
+<img src="./README/6_Profile_Web.png" width="700" alt=""/>
 
 ---
 
@@ -43,35 +44,9 @@ TrombArea offers the following functionalities:
 
 ---
 
-## 🔐 Authentication / Identification
+## 🗎 Documentations
 
-To use the application, users must be properly identified. TrombArea supports:
-
-- **Username/Password Authentication**: Clients submit credentials to the server.
-- **OAuth2 Identification**: Clients can authenticate via third-party services (e.g., Google, Facebook) and notify the server upon success.
-
-Ensure that third-party accounts are linked to system user accounts.
-
----
-
-## 🔧 Setup Guide
-
-### 📦 Docker Compose Deployment
-
-TrombArea is containerized using Docker Compose. Ensure Docker and Docker Compose are installed, then execute:
-
-```bash
-docker-compose build
-docker-compose up
-```
-
-**Services Deployed:**
-
-- **Server Service**: Runs the application server on port **8080**.
-- **Client_Mobile Service**: Builds the mobile client.
-- **Client_Web Service**: Launches the web client on port **8081** (depends on both the server and mobile client).
-
-The server exposes endpoints such as `http://localhost:8080/about.json` for service details, and the web client serves assets like the Android APK at `http://localhost:8081/client.apk`.
+We have a documentation in the [docs/](./docs/) that you can open with live server [index.html](./docs/index.html)
 
 ---
 
@@ -84,67 +59,6 @@ The server exposes endpoints such as `http://localhost:8080/about.json` for serv
 - **Action & REAction Execution**: Custom workflows trigger responses based on events.
 - **Real-Time Triggering**: The server continuously monitors for conditions to activate workflows.
 
-### API Example
-
-**GET** `http://localhost:8080/about.json`
-_Response:_
-```json
-{
-  "client": { "host": "YOUR_CLIENT_IP" },
-  "server": {
-    "current_time": 1531680780,
-    "services": [
-      {
-        "name": "facebook",
-        "actions": [
-          { "name": "new_message_in_group", "description": "A new message is posted in a group" },
-          { "name": "new_message_inbox", "description": "A new private message is received" },
-          { "name": "new_like", "description": "The user gains a like on a message" }
-        ],
-        "reactions": [
-          { "name": "like_message", "description": "The user likes a message" }
-        ]
-      }
-    ]
-  }
-}
-```
-
-Refer to the full API documentation for further details.
-
----
-
-## 🏗️ Architecture & Technology Choices
-
-### Architecture Overview
-
-- **Application Server**: Hosts the business logic, provides a REST API, and manages workflows.
-- **Web Client**: User interface for desktop access.
-- **Mobile Client**: Mobile-friendly interface, sharing common volumes with the web client.
-
-### Technology Choices
-
-#### Backend:
-- **NodeJS (TypeScript)**: Chosen for its simplicity, widespread use, and ease of integration.
-
-#### Frontend:
-- **Flutter**: Preferred for its cross-platform capabilities and seamless integration with Firebase.
-
-*Other options considered include Rust, Python (FastAPI), and Java, but NodeJS and Flutter best meet our requirements.*
-
----
-
-## 📝 Project Construction
-
-- **Docker Compose**:
-  A `docker-compose.yml` file orchestrates all services.
-- **Volume Sharing**:
-  The mobile and web clients share a common volume for resource synchronization.
-- **Makefile**:
-  Use the provided Makefile for building, cleaning, and maintaining the project.
-
----
-
 ## 🏆 Evaluation Criteria
 
 TrombArea will be evaluated based on:
@@ -154,18 +68,10 @@ TrombArea will be evaluated based on:
 - **Automation Efficiency**: Accurate and timely execution of triggers and workflows.
 - **Code Quality & Documentation**: Clean, maintainable code with comprehensive documentation.
 
----
-
-## 🎨 Presentation
-
-*This section is reserved for visual presentations. Add screenshots of the application, website, and Firebase configuration here to showcase the UI and infrastructure.*
-
----
-
 ## 👥 Contributors
 
-- WilliamAndreo
-- 0yco
-- LunnosMp4
-- ?
-- ArnauldT
+-  [WilliamAndreo](https://github.com/WilliamAndreo)
+-  [0yco](https://github.com/0yco)
+-  [LunnosMp4](https://github.com/LunnosMp4)
+-  [Nico-coder-ui](https://github.com/Nico-coder-ui)
+-  [ArnauldT](https://github.com/ArnauldT)

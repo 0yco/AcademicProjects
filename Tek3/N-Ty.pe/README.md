@@ -1,6 +1,6 @@
 # N-Ty.pe Project
 
-## Contributors
+## 👥 Contributors
 
 -  [0yco](https://github.com/0yco)
 

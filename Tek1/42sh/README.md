@@ -87,7 +87,7 @@ With the best animation ever 🫶🏼
   ./42sh -g
 ```
 
-## Contributors
+## 👥 Contributors
 
 - [Lunnos](https://github.com/LunnosMp4)
 - [0yco](https://github.com/0yco)

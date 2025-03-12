@@ -63,7 +63,7 @@ This is your personal handiwork. They must be able to fight and to victoriously 
 
 ![GUI](./res/GUI.png)
 
-# Contributors
+## 👥 Contributors
 
 - [0yco](https://github.com/0yco) (Virtual Machine | User Interface)
 - [Lunnos](https://github.com/LunnosMp4) (Virtual Machine)

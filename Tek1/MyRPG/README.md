@@ -9,7 +9,7 @@ make re
 ./my_rpg
 ```
 
-## Contributors
+## 👥 Contributors
 
 -  [0yco](https://github.com/0yco)
 
